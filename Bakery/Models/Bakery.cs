@@ -14,14 +14,13 @@ namespace Bakery.Models
     {
       BreadQuantity = breadQuantity;
       BreadCost = breadCost;
-      //FinalPrice = finalPrice;
-      //_instances.Add(this);
     }
 
     public static int BreadSale(int breadQuantity)
     {
-      //Bread bread = new Bread(5, 5);
       int finalPrice = (breadQuantity * 5) - ((breadQuantity / 3) * 5);
+      //int finalPrice = (int)Math.Ceiling((int)breadQuantity / 3 * 2.0);
+      //int finalPrice = (breadQuantity / 3 ) * 2 + breadQuantity % 3;
       return finalPrice;
     }
 
