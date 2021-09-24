@@ -1,6 +1,5 @@
 using System;
 using Bakery.Models;
-//using Pastry.Models;
 
 namespace Bakery.Models
 {
@@ -16,9 +15,7 @@ namespace Bakery.Models
 |P|i|e|r|r|e|'|s| |B|a|k|e|r|y|!|!|
 ***********************************                        
                                                                  ";
-            Console.WriteLine(title);
- 
-
+        Console.WriteLine(title);
         Console.WriteLine("*************");
         Console.WriteLine("Today On Sale:");
         Console.WriteLine("*************");
@@ -26,8 +23,8 @@ namespace Bakery.Models
         Console.WriteLine("(every 3rd loaf of bread is free.)");
         Console.WriteLine("***********************************");
         Console.WriteLine("A single loaf costs $5");
-        Console.WriteLine("Two loaves cost     $10");
-        Console.WriteLine("Three loaves cost   $10");
+        Console.WriteLine("Two loaves          $10");
+        Console.WriteLine("Three loaves        $10");
         Console.WriteLine("***********************");
         Console.WriteLine("\n");
         Console.WriteLine("CHECK OUT");
