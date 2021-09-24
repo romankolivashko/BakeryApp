@@ -7,6 +7,9 @@ namespace Bakery.Models
     {
         static void Main(string[] args)
         {
+        Console.BackgroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.Black;
+        Console.Clear();
         Console.Title = "ASCII Art";
             string title = @"
 ***********************************             
