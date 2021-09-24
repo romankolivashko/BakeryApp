@@ -13,11 +13,18 @@ namespace Bakery
       Description = description;
       _instances.Add(this);
     }
+
+    public static List<Bread> GetAll()
+    {
+      return _instances;
+    }
+
   }
     public class Pastry
   {
     // properties, constructors, methods, etc. go here
   }
+
 
 
 }
