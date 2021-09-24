@@ -10,7 +10,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread("rye");
+      Bread newBread = new Bread("rye", 0, 3);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
     
@@ -19,7 +19,7 @@ namespace Bakery.Tests
     {
       //Arrange
       string description = "wheat";
-      Bread newBread = new Bread(description);
+      Bread newBread = new Bread(description, 0, 4);
 
       //Act
       string result = newBread.Description;
@@ -33,7 +33,7 @@ namespace Bakery.Tests
     {
       //Arrange
       string description = "wheat";
-      Bread newBread = new Bread(description);
+      Bread newBread = new Bread(description, 0, 4);
 
       //Act
       string updatedDescription = "white";
@@ -44,24 +44,30 @@ namespace Bakery.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
-    [TestMethod]
-    public void GetAll_ReturnsBreadItems_BreadList()
-    {
-      //Arrange
-      string description01 = "wheat";
-      string description02 = "white";
-      string description03 = "rye";
-      Bread newBread1 = new Bread(description01);
-      Bread newBread2 = new Bread(description02);
-      Bread newBread3 = new Bread(description03);
-      List<Bread> newList = new List<Bread> { newBread1, newBread2, newBread3 };
+    // [TestMethod]
+    // public void GetAll_ReturnsBreadItems_BreadList()
+    // {
+    //   //Arrange
+    //   string description01 = "wheat";
+    //   int quant01 = 0;
+    //   int cost01 = 3;
+    //   string description02 = "white";
+    //   int quant02 = 0;
+    //   int cost02 = 4;
+    //   string description03 = "rye";
+    //   int quant03 = 0;
+    //   int cost03 = 5;
+    //   Bread newBread1 = new Bread(description01, quant01, cost01);
+    //   Bread newBread2 = new Bread(description02, quant02, cost02);
+    //   Bread newBread3 = new Bread(description03, quant03, cost03);
+    //   List<Bread> newList = new List<Bread> { newBread1, newBread2, newBread3 };
 
-      //Act
-      List<Bread> result = Bread.GetAll();
+    //   //Act
+    //   List<Bread> result = Bread.GetAllBread();
 
-      //Assert
-      CollectionAssert.AreEqual(newList, result);
-    }
+    //   //Assert
+    //   CollectionAssert.AreEqual(newList, result);
+    // }
     // [TestMethod]
     // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()t
     // {
