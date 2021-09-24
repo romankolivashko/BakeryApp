@@ -1,12 +1,12 @@
 using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 namespace Bakery.Models
 {
   public class Bread
   {
     // properties, methods, etc. will go here.
-    private static List<Bread> _instances = new List<Bread> {};
+    //private static List<Bread> _instances = new List<Bread> {};
     //public string Description { get; set;}
     public int BreadQuantity { get; set;}
     public int BreadCost { get; set;}
