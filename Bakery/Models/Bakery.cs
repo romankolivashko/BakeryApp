@@ -1,31 +1,28 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bakery
+namespace Bakery.Models
 {
   public class Bread
   {
     // properties, methods, etc. will go here.
     private static List<Bread> _instances = new List<Bread> {};
     //public string Description { get; set;}
-    public int Quantity { get; set;}
-    public int Cost { get; set;}
-
-    public Bread(int quant, int cost)
+    public int BreadQuantity { get; set;}
+    public int BreadCost { get; set;}
+    public Bread(int breadQuantity, int breadCost)
     {
-      Quantity = quant;
-      Cost = cost;
-      _instances.Add(this);
+      BreadQuantity = breadQuantity;
+      BreadCost = breadCost;
+      //FinalPrice = finalPrice;
+      //_instances.Add(this);
     }
 
-    public static void BreadCreate()
+    public static int BreadSale(int breadQuantity)
     {
-      Bread bread = new Bread(1, 5);
-      // Bread white = new Bread("white", 0, 4);
-      // Bread rye = new Bread("rye", 0, 5);
-      // _instances.Add(wheat);
-      // _instances.Add(white);
-      // _instances.Add(rye);
+      //Bread bread = new Bread(5, 5);
+      int finalPrice = (breadQuantity * 5) - ((breadQuantity / 3) * 5);
+      return finalPrice;
     }
 
 
@@ -41,7 +38,7 @@ namespace Bakery
 
     // public static int BreadPrice()
     // {
-    //   int finalPrice = (Bread.BreadCount() * 5) - ((Bread.BreadCount() / 3) * 5);
+    //   int finalPrice = (Quantity * 5) - ((Quantity / 3) * 5);
     //   return finalPrice;
     // }
 
