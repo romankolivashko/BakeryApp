@@ -11,10 +11,10 @@ namespace Bakery.Models
       PastryQuantity = pastryQuantity;
       PastryCost = pastryCost;
     }
-
+    const int pastryCost = 2;
     public static int PastrySale(int pastryQuantity)
     {
-      int finalPrice = (pastryQuantity * 2) - ((pastryQuantity / 3) * 1);
+      int finalPrice = (pastryQuantity * pastryCost) - ((pastryQuantity / 3) * 1);
       return finalPrice;
     }
 

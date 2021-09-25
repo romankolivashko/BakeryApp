@@ -12,9 +12,10 @@ namespace Bakery.Models
       BreadCost = breadCost;
     }
 
+    const int breadCost = 5;
     public static int BreadSale(int breadQuantity)
     {
-      int finalPrice = (breadQuantity * 5) - ((breadQuantity / 3) * 5);
+      int finalPrice = (breadQuantity * breadCost) - ((breadQuantity / 3) * breadCost);
       return finalPrice;
     }
 

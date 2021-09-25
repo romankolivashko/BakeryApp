@@ -6,62 +6,73 @@ namespace Bakery.Tests
 {
   [TestClass]
   public class Tests
-  {
+  {    
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      //int quantInputB = 1;
-      Bread newBread = new Bread();
+      Bread newBread = new Bread(1, 0);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
-    
-    [TestMethod]
-    public void GetDescription_ReturnsDescription_Bread()
-    {
-      //Arrange
-      string description = "wheat";
-      Bread newBread = new Bread(description, 0, 4);
 
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry(1, 0);
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
+
+    [TestMethod]
+    public void GetBreadQuantity_ReturnsBreadQuantity_ReturnsInt()
+    { 
+      // Arrange
+      int breadQuantity = 1;
+      int breadCost = 5;
+      Bread newBread = new Bread(breadQuantity, breadCost);
+      
       //Act
-      string result = newBread.Description;
+      int result = newBread.BreadQuantity;
 
       //Assert
-      Assert.AreEqual(description, result);
+      Assert.AreEqual(breadQuantity, result);
     }
 
     [TestMethod]
-    public void SetDescription_SetDescription_Bread()
-    {
-      //Arrange
-      string description = "wheat";
-      Bread newBread = new Bread(description, 0, 4);
-
+    public void GetPastryQuantity_ReturnsPastryQuantity_ReturnsInt()
+    { 
+      // Arrange
+      int pastryQuantity = 1;
+      int pastryCost = 5;
+      Pastry newPastry = new Pastry(pastryQuantity, pastryCost);
+      
       //Act
-      string updatedDescription = "white";
-      newBread.Description = updatedDescription;
-      string result = newBread.Description;
+      int result = newPastry.PastryQuantity;
 
       //Assert
-      Assert.AreEqual(updatedDescription, result);
+      Assert.AreEqual(pastryQuantity, result);
     }
 
-    [TestMethod]
-    public void GetAll_ReturnsBreadItems_BreadList()
-    {
-      //Arrange
+    // [TestMethod]
+    // public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    // {
+    //   int breadQuantity = 1;
+    //   int breadCost = 5;
+    //   Bread newBread = new Bread(breadQuantity, breadCost);
+    //   Assert.AreEqual(typeof(Bread), newBread.GetType());
+    // }
 
-      //Act
-      List<Bread> result = Bread.GetAllBread();
+    // [TestMethod]
+    // public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    // {
+    //   Pastry newPastry = new Pastry(1, 0);
+    //   Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    // }
 
-      //Assert
-      CollectionAssert.AreEqual(newList, result);
-    }
 
-    [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()t
-    {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    }
+    // [TestMethod]
+    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()t
+    // {
+    //   // any necessary logic to prep for test; instantiating new classes, etc.
+    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+    // }
   }
 }
