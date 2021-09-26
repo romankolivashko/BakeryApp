@@ -5,7 +5,7 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class Tests
+  public class BakeryTests
   {    
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
@@ -26,8 +26,8 @@ namespace Bakery.Tests
     { 
       // Arrange
       int breadQuantity = 1;
-      int breadCost = 5;
-      Bread newBread = new Bread(breadQuantity, breadCost);
+      //int breadCost = 5;
+      Bread newBread = new Bread(breadQuantity, 0);
       
       //Act
       int result = newBread.BreadQuantity;
@@ -41,8 +41,8 @@ namespace Bakery.Tests
     { 
       // Arrange
       int pastryQuantity = 1;
-      int pastryCost = 5;
-      Pastry newPastry = new Pastry(pastryQuantity, pastryCost);
+      //int pastryCost = 5;
+      Pastry newPastry = new Pastry(pastryQuantity, 0);
       
       //Act
       int result = newPastry.PastryQuantity;
@@ -51,22 +51,34 @@ namespace Bakery.Tests
       Assert.AreEqual(pastryQuantity, result);
     }
 
-    // [TestMethod]
-    // public void BreadConstructor_CreatesInstanceOfBread_Bread()
-    // {
-    //   int breadQuantity = 1;
-    //   int breadCost = 5;
-    //   Bread newBread = new Bread(breadQuantity, breadCost);
-    //   Assert.AreEqual(typeof(Bread), newBread.GetType());
-    // }
+    
+    [TestMethod]
+    public void GetBreadCost_ReturnsBreadCost_ReturnsInt()
+    { 
+      // Arrange
+      int breadCost = 5;
+      Bread newBread = new Bread(0, breadCost);
+      
+      //Act
+      int result = newBread.BreadCost;
 
-    // [TestMethod]
-    // public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
-    // {
-    //   Pastry newPastry = new Pastry(1, 0);
-    //   Assert.AreEqual(typeof(Pastry), newPastry.GetType());
-    // }
+      //Assert
+      Assert.AreEqual(breadCost, result);
+    }
 
+    [TestMethod]
+    public void GetPastryCost_ReturnsPastryCost_ReturnsInt()
+    { 
+      // Arrange
+      int pastryCost = 2;
+      Pastry newPastry = new Pastry(0, pastryCost);
+      
+      //Act
+      int result = newPastry.PastryCost;
+
+      //Assert
+      Assert.AreEqual(pastryCost, result);
+    }
 
     // [TestMethod]
     // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()t
