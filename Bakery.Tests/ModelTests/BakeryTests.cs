@@ -79,12 +79,5 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(pastryCost, result);
     }
-
-    // [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()t
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    // }
   }
 }
