@@ -13,7 +13,7 @@ namespace Bakery.Models
     }
 
     const int breadCost = 5;
-    public static int BreadSale(int breadQuantity)
+    public int BreadSale(int breadQuantity)
     {
       int finalPrice = (breadQuantity * breadCost) - ((breadQuantity / 3) * breadCost);
       return finalPrice;

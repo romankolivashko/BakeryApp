@@ -55,8 +55,8 @@ namespace Bakery.Models
         Console.WriteLine("\n");
         Bread bread = new Bread(quantInputB, 0);
         Pastry pastry = new Pastry(quantInputP, 0);
-        int breadSubtotal = Bread.BreadSale(quantInputB);
-        int pastrySubtotal = Pastry.PastrySale(quantInputP);
+        int breadSubtotal = bread.BreadSale(quantInputB);
+        int pastrySubtotal = pastry.PastrySale(quantInputP);
         Console.WriteLine("Thank you! Your order is ready");
         Console.WriteLine("******************************");
         System.Console.WriteLine("Bread sub-total:           $" + breadSubtotal);

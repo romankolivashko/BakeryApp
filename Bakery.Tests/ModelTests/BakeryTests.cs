@@ -79,5 +79,6 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(pastryCost, result);
     }
+    
   }
 }
