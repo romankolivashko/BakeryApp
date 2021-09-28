@@ -33,13 +33,23 @@ namespace Bakery.Models
         Console.WriteLine("CHECK OUT");
         Console.WriteLine("**********");
         Console.WriteLine("Would you like some bread? ");
+        int quantInputB;
         Console.WriteLine("Enter number of loaves(if none, enter 0):");
-        int quantInputB = Int32.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out quantInputB))
+        {
+          Console.Write("This is not a valid input.\n");
+          Console.Write("Please enter an integer value: ");
+        }
         System.Console.WriteLine("Confirmed! " + quantInputB + " loaves of bread.");
         Console.WriteLine("*****************************");
         Console.WriteLine("Would you like some pastry as well?");
+        int quantInputP;
         Console.WriteLine("Enter number of pastries(if none, enter 0):");
-        int quantInputP = Int32.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out quantInputP))
+        {
+          Console.Write("This is not a valid input.\n");
+          Console.Write("Please enter an integer value: ");
+        }
         System.Console.WriteLine("Confirmed! " + quantInputP + " piece(s) of pastry.");
         Console.WriteLine("********************************");
         Console.WriteLine("\n");
